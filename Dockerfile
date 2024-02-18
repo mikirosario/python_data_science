@@ -5,6 +5,7 @@ WORKDIR /app
 RUN apk update; \
     apk add \
     bash \
-    git
+    git \
+    pip install DateTime
 
 CMD bash
