@@ -1,7 +1,7 @@
 def NULL_not_found(object: any) -> int:
     allowed_types: dict[type, tuple[str, callable[[any], bool]]] = {
         type(None): ("Nothing", lambda val : type(val) is type(None)),
-        float: ("Cheese", lambda val : val != val), 
+        float: ("Cheese", lambda val : val != val),
         int: ("Zero", lambda val : not bool(val)),
         str: ("Empty", lambda val : not bool(val)),
         bool: ("Fake", lambda val : not val)
