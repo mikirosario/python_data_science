@@ -7,7 +7,7 @@ def validation() -> str:
     argc: int = len(sys.argv)
     assert argc < 3, "more than one argument is provided"
     if (argc < 2):
-        return input("What is the text to count?\n")
+        return input("What is the text to count?\n") + " "
     return sys.argv[1]
 
 
@@ -16,7 +16,7 @@ def main():
     characters, lower-case characters, punctuation characters, digits and
     spaces.'''
     try:
-        string_punctuation: str = '!"#$%&\'()*+,-./:;<=>?@[]^_`{|}~\\'
+        string_punctuation: str = '\n!"#$%&\'()*+,-./:;<=>?@[]^_`{|}~\\'
         user_input: str = validation()
         upper_count: int = sum(1 for c in user_input if c.isupper())
         lower_count: int = sum(1 for c in user_input if c.islower())
@@ -32,6 +32,10 @@ def main():
               {digit_count} digits""")
     except AssertionError as ass_err:
         print(f'Assertion Error: {ass_err}')
+    except KeyboardInterrupt as key_err:
+        print(f"\n{type(key_err).__name__}: Ctrl+C pressed")
+    except EOFError as eof:
+        print(f"\n{type(eof).__name__}: Ctrl+D pressed")
     except Exception as ex:
         print(ex)
 

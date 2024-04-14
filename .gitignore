@@ -1,3 +1,8 @@
+# 42 Entrega
+.gitignore
+.git
+helloworld.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

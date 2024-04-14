@@ -2,6 +2,7 @@ import sys
 
 
 def intify(object: any) -> tuple[bool, int]:
+    """Intifies things"""
     try:
         integer = int(object)
         return (True, integer)
@@ -10,6 +11,7 @@ def intify(object: any) -> tuple[bool, int]:
 
 
 if __name__ == "__main__":
+    """I am a main"""
     sys.tracebacklimit = 0
     argc = len(sys.argv)
     if argc < 2:

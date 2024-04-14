@@ -8,6 +8,8 @@ RUN apk update; \
     git; \
     pip install DateTime; \
     pip install flake8; \
-    alias norminette=flake8
+    pip install tqdm; \
+    pip install numpy; \
+    pip install pypi-install;
 
 CMD bash
